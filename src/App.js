@@ -3,7 +3,6 @@ import { TodoInputSerch } from "./TodoInputSerch";
 import { TodoList } from "./TodoList";
 import { TodoAddTodos } from "./TodoAddButton";
 import { TodoItem } from "./TodoItems";
-import "./App.css";
 import React from "react";
 
 const defaultTodos = [
@@ -15,7 +14,7 @@ const defaultTodos = [
 ];
 function App() {
   return (
-    <React.Fragment>
+    <>
       <TodoCounter complet={16} total={25} />
       <TodoInputSerch />
       <TodoList>
@@ -24,7 +23,7 @@ function App() {
         ))}
       </TodoList>
       <TodoAddTodos />
-    </React.Fragment>
+    </>
   );
 }
 

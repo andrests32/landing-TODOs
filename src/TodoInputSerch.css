@@ -1,0 +1,8 @@
+input {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat Alternates', cursive;
+    text-align: center;
+    font-size: x-large;
+    border-radius: 20px;
+}
