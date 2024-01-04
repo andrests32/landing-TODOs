@@ -19,7 +19,7 @@ function TodoCounter({ complet, total }) {
         //   boxShadow: "2px 2px 2px 1px #360b41"
         // }}
       >
-        Has Completado {complet} de {total} TODOs
+        Has Completado <span className="spanDeco">{complet}</span> de <span className="spanDeco">{total}</span> TODOs
       </h1>
     </header>
   );
