@@ -1,13 +1,16 @@
-import './TodoItems.css'
+import "./TodoItems.css";
 function TodoItem(props) {
   return (
-    <li>
-      <span>V</span>
-      <p>{props.text}</p>
-      <span>X</span>
-    </li>
+    <section>
+      <div className="containerTodoItems">
+        <li className="TodoItem">
+          <span className="Icon Icon-check Icon-check--active">V</span>
+          <p className="TodoItem-p TodoItem-p--Complete">{props.text}</p>
+          <span className="Icon Icon-delete">X</span>
+        </li>
+      </div>
+    </section>
   );
 }
 
 export { TodoItem };
-git 
