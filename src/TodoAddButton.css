@@ -1,21 +1,22 @@
 .CreatBttn {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 64px;
-   height: 64px;
-   border-radius: 50%;
-   border: none;
-   font-size: 50px;
-   font-weight: bold;
-   color: aliceblue;
-   text-shadow: 2px 0.5px 4px #333;
-   background-color: #ed4c87;
-   padding-bottom: 7px;
-   box-shadow: 0 1px 25px #333;
-   cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: none;
+    font-size: 50px;
+    font-weight: bold;
+    color: aliceblue;
+    text-shadow: 2px 0.5px 4px #333;
+    background-color: #ed4c87;
+    padding-bottom: 6px;
+    box-shadow: 0 1px 25px #333;
+    cursor: pointer;
     transform: rotate(0);
     transition: .3s ease;
+    margin: 0 0 0 0;
 }
 
 .CreatBttn:hover {
