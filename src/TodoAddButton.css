@@ -8,17 +8,18 @@
     border: none;
     font-size: 50px;
     font-weight: bold;
-    color: aliceblue;
+    color: white;
     text-shadow: 2px 0.5px 4px #333;
     background-color: #ed4c87;
     padding-bottom: 6px;
-    box-shadow: 0 1px 25px #333;
+    box-shadow: 0 0px 18px #333;
     cursor: pointer;
-    transform: rotate(0);
+    transform: rotate();
     transition: .3s ease;
-    margin: 0 0 0 0;
+    margin: 0 10px 10px;
 }
 
 .CreatBttn:hover {
     transform: rotate(224deg);
+    background: #562155;
 }
