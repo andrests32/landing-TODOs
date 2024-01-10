@@ -2,13 +2,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    filter: blur(2);
+    /* filter: blur(2); */
     background-color: #3df17b;
-    margin-left: 550px;
-    margin-right: 550px;
+    /* margin-left: 550px; */
+    /* margin-right: 550px; */
     /* opacity: 0.9; */
     border-radius: 0 0 20px 20px;
     box-shadow: 0 1px 25px #333;
+    margin-bottom: 100px;
+    padding: 0 12px 20px;
 }
 
 .todoTilte {

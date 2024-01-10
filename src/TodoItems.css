@@ -1,3 +1,116 @@
-li {
-    flex-direction: column;
+/* .containerTodoItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    position: relative;
+    width: 400px;
+    height: 100px;
+    left: 1400px;
+    box-shadow: 0 1px 25px #333;
+    border-radius: 40px;
+}
+
+.TodoItem {
+    background-color: #3df17b;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14px;
+    box-shadow: 0px 5px 10px ;
+    border-radius: 20px;
+    width: 300px;
+    margin: 0 0 0 0;
+} */
+
+.TodoItem {
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    box-shadow: 1px 0 15px #000000;
+    border-radius: 20px;
+    background-color: #3df17b;
+    width: 600px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.TodoItem:hover {
+    background: #562155;
+    /* box-shadow: none; */
+    /* text-shadow: 2px 2px 8px #3df17b; */
+}
+
+.TodoItem-p {
+    margin: 24px 0 24px 24px;
+    width: calc(100% - 120px);
+    font-size: 30px;
+    line-height: 24px;
+    font-weight: 600px;
+    color: #ffffff;
+    text-shadow: 2px 2px 3px #333;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.TodoItem-p--Complete {
+    text-decoration: line-through;
+}
+
+.Icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Icon-check {
+    position: absolute;
+    top: 27px;
+    left: -0px;
+    background: #ffd41f;
+    border-radius: 0 20px 0 20px;
+    color: #3df17b;
+    width: 50px;
+    height: 45px;
+    /* box-shadow: 1px 2px 12px; */
+    font-size: xx-large;
+}
+
+.Icon-check--active {
+    color: yellow;
+    /* font-weight: bold; */
+}
+
+.Icon-check--active:hover {
+    box-shadow: 3px 5px 20px #562155;
+
+    text-shadow: 1px 2px 2px #562155;
+
+}
+
+.Icon-delete {
+    color: #3df17b;
+    position: absolute;
+    top: -0px;
+    right: 0;
+    background: #f2643d;
+    border-radius: 0 20px;
+    font-size: x-large;
+    padding: 0 0 0;
+    font-weight: 600;
+    text-shadow: 1px 2px 2px #562155;
+
+}
+
+.Icon-delete:hover {
+    color: #f9f9f1;
+    box-shadow: 3px 5px 20px #562155;
+    /* text-shadow: none; */
 }
