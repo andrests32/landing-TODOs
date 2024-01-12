@@ -20,7 +20,7 @@ function TodoCounter({ complet, total }) {
         // }}
       >
         Has Completado <span className="spanDeco">{complet}</span> de{" "}
-        <span className="spanDeco">{total}</span> TODOs
+        <span className="spanDeco">{total}</span> Tareas
       </h1>
     </header>
   );

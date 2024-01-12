@@ -1,36 +1,39 @@
 .TodoInput {
     background: white;
-    color: #333;
+    color: #2fed19;
     border-radius: 12px;
-    margin: 0 24px;
-    height: 100px;
-    width: calc(100% - 300px);
-    font-size: 34px;
+    height: 80px;
+    width: calc(100% - 200px);
+    font-size: 35px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     box-shadow: 0 1px 15px #333;
     border: none;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    margin-top: 60px;
     font-family: 'Montserrat Alternates', sans-serif;
-    text-shadow: 2px 2px 2px #696969;
     outline: none;
+    /* text-shadow: 1px 0px 2px #333; */
+
 }
 
 .TodoInput::placeholder {
-    color: #333;
-    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-    /* font-weight: 600; */
-    font-size: x-large;
+    color: #baafc4;
+    font-size: xx-large;
+    margin-top: 300px;
 }
 
-/* .TodoInput:focus {
-    outline-color: black;
-} */
+.TodoInput:hover::placeholder {
+    color: #f1ffe8;
+    text-shadow: none;
+}
+
 
 .TodoInput:hover {
-    background: #e5e5e5;
-    color: #333;
+    background: #f1ffe8;
     font-family: 'Montserrat Alternates', sans-serif;
     box-shadow: none;
-    text-shadow: 2px 2px 2px #696969;
+    box-shadow: inset 2px 1px 4px black;
+    text-shadow: 1px 0px 2px #333;
+    font-size: 35px;
 }

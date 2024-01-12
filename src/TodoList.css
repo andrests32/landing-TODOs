@@ -1,12 +1,3 @@
-/* .containerTodoList {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: cornflowerblue;
-    border-radius: 20px;
-    /* filter: blur(1px); */
-
 .TodoList {
     margin: 0;
     padding: 0 0 56PX 0;

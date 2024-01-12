@@ -6,19 +6,25 @@ import { TodoItem } from "./TodoItems";
 import React from "react";
 
 const defaultTodos = [
-  { text: "Ver Peliculas", complet: true },
-  { text: "Lavar Ropa", complet: true },
-  { text: "Cepillar Dientes", complet: false },
-  { text: "Leer", complet: false },
-  { text: "Escuchar Musica", complet: false }
+  { text: "Ver Peliculas", complete: true },
+  { text: "Lavar Ropa", complete: false },
+  { text: "Cepillar Dientes", complete: false },
+  { text: "Leer", complete: false },
+  { text: "Escuchar Musica", complete: false }
 ];
 function App() {
   const [tODOs, setTODOs] = React.useState(defaultTodos);
   const [searchValue, setSearchValue] = React.useState("");
   // console.log("Busqueda de datos del search" + searchValue);
 
-  const completTodos = tODOs.filter((todo) => !!todo.complet).length;
+  const completTodos = tODOs.filter((todo) => !!todo.complete).length;
   const totalTodos = tODOs.length;
+
+  const serchedTodos = tODOs.filter((todo) => {
+    const todoTex = todo.text.toLowerCase();
+    const serchText = searchValue.toLowerCase();
+    return todoTex.includes(serchText);
+  });
 
   return (
     <>
@@ -27,9 +33,9 @@ function App() {
         searchValue={searchValue}
         setSearchValue={setSearchValue}
       />
-        <TodoAddTodos />
+      <TodoAddTodos />
       <TodoList>
-        {defaultTodos.map((todo) => (
+        {serchedTodos.map((todo) => (
           <TodoItem key={todo.text} text={todo.text} complete={todo.complete} />
         ))}
       </TodoList>
