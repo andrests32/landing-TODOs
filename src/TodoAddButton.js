@@ -6,7 +6,7 @@ function TodoAddTodos() {
       className="CreatBttn"
       onClick={(event) => console.log("hiciste click")}
     >
-      +
+      <p>+</p>
     </button>
   );
 }

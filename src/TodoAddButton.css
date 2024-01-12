@@ -2,24 +2,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
+    width: 100px;
+    height: 60px;
+    border-radius: 30px;
     border: none;
     font-size: 50px;
     font-weight: bold;
-    color: white;
-    text-shadow: 2px 0.5px 4px #333;
-    background-color: #ed4c87;
+    color: #ed4c87;
+    background-color: #ffffff;
     padding-bottom: 6px;
-    box-shadow: 0 0px 18px #333;
+    box-shadow: 0 0px 10px black;
     cursor: pointer;
-    transform: rotate();
-    transition: .3s ease;
+    transition: .5s ease;
     margin: 0 10px 10px;
+    text-shadow: 0 0 1px black;
 }
 
 .CreatBttn:hover {
-    transform: rotate(224deg);
-    background: #562155;
+    background: #ffffff;
+    color: #26ade4;
+    text-shadow: 0 0 4px black;
+    border-radius: 50%;
+    width: 64px;
+    height: 60px;
+    box-shadow: 0 0 10px black;
 }
