@@ -26,6 +26,20 @@ function App() {
     return todoTex.includes(serchText);
   });
 
+  const checkTodo = (text) => {
+    const newTodos = [...tODOs];
+    const indexTodos = newTodos.findIndex((tODOs) => tODOs.text === text);
+    newTodos[indexTodos].complete = true;
+    setTODOs(newTodos);
+  };
+
+  const deleteTodo = (text) => {
+    const newTodos = [...tODOs];
+    const indexTodos = newTodos.findIndex((tODOs) => tODOs.text === text);
+    newTodos.splice(indexTodos, 1);
+    setTODOs(newTodos);
+  };
+
   return (
     <>
       <TodoCounter complet={completTodos} total={totalTodos} />
@@ -36,7 +50,13 @@ function App() {
       <TodoAddTodos />
       <TodoList>
         {serchedTodos.map((todo) => (
-          <TodoItem key={todo.text} text={todo.text} complete={todo.complete} />
+          <TodoItem
+            key={todo.text}
+            text={todo.text}
+            complete={todo.complete}
+            onComplete={() => checkTodo(todo.text)}
+            onDelete={() => deleteTodo(todo.text)}
+          />
         ))}
       </TodoList>
     </>
