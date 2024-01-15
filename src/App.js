@@ -4,14 +4,13 @@ import { TodoList } from "./TodoList";
 import { TodoAddTodos } from "./TodoAddButton";
 import { TodoItem } from "./TodoItems";
 import React from "react";
-import { BrowserRouter } from "./BrowserRouter";
 
 const defaultTodos = [
-  { text: "Aprender Laravel", complete: true },
-  { text: "Polimorfismo con PHP", complete: false },
-  { text: "Metodos de Abstraccion", complete: false },
-  { text: "Leer Habitos atomicos", complete: false },
-  { text: "Buscar nuevas canciones", complete: false }
+  { text: "Ver Peliculas", complete: true },
+  { text: "Lavar Ropa", complete: false },
+  { text: "Cepillar Dientes", complete: false },
+  { text: "Leer", complete: false },
+  { text: "Escuchar Musica", complete: false }
 ];
 function App() {
   const [tODOs, setTODOs] = React.useState(defaultTodos);
@@ -60,7 +59,6 @@ function App() {
           />
         ))}
       </TodoList>
-      <BrowserRouter basename="../public/index2.html"></BrowserRouter>
     </>
   );
 }
