@@ -42,6 +42,7 @@
     width: 48px;
     font-size: 24px;
     font-weight: bold;
+    padding: 0;
 }
 
 .Icon-check {
@@ -56,20 +57,31 @@
     font-size: xx-large;
 }
 
+.IconSvgCheck {
+    font-size: 35px;
+}
+
+.IconSvgDelete {
+    font-size: 35px;
+}
+
+.IconSvgDelete:hover {
+    filter: drop-shadow(2px 1px 2px black);
+}
+
 .Icon-check:hover {
     text-shadow: 1px 2px 2px #562155;
     box-shadow: 3px 5px 10px black;
 }
 
-.Icon-check--active {
+.Icon-check--active .IconSvgCheck {
     color: #c96dc5;
-    text-shadow: 1px 1px 2px black;
-    background: #d0ff7a;
+    filter: drop-shadow(2px 0 1px black);
 }
 
-.Icon-check--active:hover {
-    box-shadow: 3px 5px 20px #562155;
-    text-shadow: 1px 2px 2px #562155;
+.IconSvgCheck:hover {
+    color: #c96dc5;
+    filter: drop-shadow(2px 0 1px black);
 }
 
 .Icon-delete {
@@ -79,14 +91,9 @@
     right: 0;
     background: #77477e;
     border-radius: 0 20px;
-    font-size: x-large;
-    padding: 0 0 0;
-    font-weight: 600;
-
 }
 
 .Icon-delete:hover {
     color: #f9f9f1;
     box-shadow: 3px 5px 10px black;
-    text-shadow: 1px 2px 2px black;
 }

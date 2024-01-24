@@ -1,4 +1,5 @@
 import "./TodoAddButton.css";
+import { TiPlus } from "react-icons/ti";
 
 function TodoAddTodos() {
   return (
@@ -6,7 +7,7 @@ function TodoAddTodos() {
       className="CreatBttn"
       onClick={(event) => console.log("hiciste click")}
     >
-      <p>+</p>
+      <p className="iconPlus"><TiPlus /></p>
     </button>
   );
 }

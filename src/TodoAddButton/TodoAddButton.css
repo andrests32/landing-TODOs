@@ -1,7 +1,7 @@
 .CreatBttn {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 100px;
     height: 60px;
     border-radius: 30px;
@@ -15,13 +15,23 @@
     cursor: pointer;
     transition: .5s ease;
     margin: 0 10px 10px;
-    text-shadow: 0 0 1px black;
+}
+
+.iconPlus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4px;
+    filter: drop-shadow(0 0 2px black);
+}
+
+.iconPlus:hover {
+    filter: drop-shadow(0 0 3px black);
 }
 
 .CreatBttn:hover {
     background: #ffffff;
     color: #26ade4;
-    text-shadow: 0 0 4px black;
     border-radius: 50%;
     width: 64px;
     height: 60px;
