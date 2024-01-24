@@ -7,11 +7,12 @@
     /* margin-left: 550px; */
     /* margin-right: 550px; */
     /* opacity: 0.9; */
-    border-radius: 0 0 20px 20px;
+    border-radius: 20px 20px 20px;
     box-shadow: 0 1px 25px #333;
     /* margin-bottom: 100px; */
     /* padding: 0 12px 20px; */
     position: relative;
+    margin-top: 1px;
 }
 
 .todoTilte {
