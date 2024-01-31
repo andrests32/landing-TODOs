@@ -2,7 +2,7 @@ import "./TodosLoading.css";
 
 function TodosLoading() {
   return (
-    <main class="loader">
+    <div className="loader">
       <div>
         <ul>
           <li>
@@ -38,7 +38,7 @@ function TodosLoading() {
         </ul>
       </div>
       <span className="textLoading">Buscando tus tareas...</span>
-    </main>
+    </div>
   );
 }
 
