@@ -1,9 +1,5 @@
 import React from "react";
-import { TodoCounter } from "../TodoCounter";
-import { TodoInputSerch } from "../TodoInputSerch";
-import { TodoList } from "../TodoList";
-import { TodoItem } from "../TodoItems";
-import { TodoAddTodos } from "../TodoAddButton";
+import { AppUi } from "./AppUi";
 import { useLocalStorage } from "./useLocalStorage";
 
 // const defaultTodos = [
@@ -15,10 +11,13 @@ import { useLocalStorage } from "./useLocalStorage";
 // ];
 // localStorage.setItem("TODOS_V1", JSON.stringify(defaultTodos));
 
-
-
 function App() {
-  const [todos, saveTodos] = useLocalStorage("TODOS_V1", []);
+  // Cuando hacemos el importe de nuestras props como objeto debemos tomar muy encuenta que los nombres que colocamos dentro de nuestro custom hooks sera iguales, 
+  // const {todos, saveTodos} = useLocalStorage("TODOS_V1", []);
+  // Ahora si deseamos ocupar el mismo nombre de nuestros parametros anteriores usaremos los props nombrados es decir los colocaremos con los puntos indicando que peternecen asi al objeto que llamamos del custome hooks. 
+  // const {item: todos, saveItem: saveTodos, loading, error} = useLocalStorage("TODOS_V1", []);
+
+  const {item: todos, saveItem: saveTodos, loading, error} = useLocalStorage("TODOS_V1", []);
   const [searchValue, setSearchValue] = React.useState("");
   // console.log("Busqueda de datos del search" + searchValue);
 
@@ -46,25 +45,17 @@ function App() {
   };
 
   return (
-    <>
-      <TodoCounter complet={completTodos} total={totalTodos} />
-      <TodoInputSerch
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-      />
-      <TodoAddTodos />
-      <TodoList>
-        {serchedTodos.map((todo) => (
-          <TodoItem
-            key={todo.text}
-            text={todo.text}
-            complete={todo.complete}
-            onComplete={() => checkTodo(todo.text)}
-            onDelete={() => deleteTodo(todo.text)}
-          />
-        ))}
-      </TodoList>
-    </>
+    <AppUi
+      loading={loading}
+      error={error}
+      completTodos={completTodos}
+      totalTodos={totalTodos}
+      searchValue={searchValue}
+      setSearchValue={setSearchValue}
+      serchedTodos={serchedTodos}
+      checkTodo={checkTodo}
+      deleteTodo={deleteTodo}
+    />
   );
 }
 
