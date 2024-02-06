@@ -12,8 +12,9 @@
 }
 
 .TodoItem:hover {
-    background: #562155;
-    box-shadow: 0 0 20px #562155;
+    background: #c6d6d6;
+    /* box-shadow: 0 0 px #c6d6d6; */
+    cursor: pointer;
 }
 
 .TodoItem-p {
@@ -71,7 +72,8 @@
 
 .Icon-check:hover {
     text-shadow: 1px 2px 2px #562155;
-    box-shadow: 3px 5px 10px black;
+    box-shadow: 2px 2px 3px black;
+    
 }
 
 .Icon-check--active .IconSvgCheck {
@@ -87,7 +89,7 @@
 .Icon-delete {
     color: #f9f9f1;
     position: absolute;
-    top: -0px;
+    top: -1px;
     right: 0;
     background: #77477e;
     border-radius: 0 20px;
@@ -95,5 +97,5 @@
 
 .Icon-delete:hover {
     color: #f9f9f1;
-    box-shadow: 3px 5px 10px black;
+    box-shadow: 1px 2px 3px black;
 }

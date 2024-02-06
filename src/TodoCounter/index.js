@@ -1,9 +1,17 @@
 // const styles = {
 //   backgroundColor: 'red'
 // }
+import React from "react";
 import "./TodoCounter.css";
+import { TodoContext } from "../TodoContext";
 
-function TodoCounter({ complet, total }) {
+function TodoCounter() {
+   const {
+    completTodos,
+    totalTodos,
+
+  } = React.useContext(TodoContext);
+
   return (
     <header className="divTiltle">
       <h1
@@ -19,8 +27,8 @@ function TodoCounter({ complet, total }) {
         //   boxShadow: "2px 2px 2px 1px #360b41"
         // }}
       >
-        Has Completado <span className="spanDeco">{complet}</span> de{" "}
-        <span className="spanDeco">{total}</span> Tareas
+        Has Completado <span className="spanDeco">{completTodos}</span> de{" "}
+        <span className="spanDeco">{totalTodos}</span> Tareas
       </h1>
     </header>
   );

@@ -9,7 +9,7 @@
   width: 200px;
   height: 140px;
   position: relative;
-  margin-top: 90px;
+  margin-top: 80px;
 }
 
 .loader:before, .loader:after {
