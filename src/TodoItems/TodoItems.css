@@ -8,13 +8,13 @@
     background-color: #3df17b;
     border-radius: 20px;
     width: 600px;
-    box-shadow: 1px 0 8px #000000;
 }
 
 .TodoItem:hover {
     background: #c6d6d6;
     /* box-shadow: 0 0 px #c6d6d6; */
     cursor: pointer;
+    box-shadow: 1px 0 8px #000000;
 }
 
 .TodoItem-p {
