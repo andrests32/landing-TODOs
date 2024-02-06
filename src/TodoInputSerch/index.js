@@ -1,6 +1,8 @@
 import React from "react";
 import "./TodoInputSerch.css";
-function TodoInputSerch({ searchValue, setSearchValue }) {
+import { TodoContext } from "../TodoContext";
+function TodoInputSerch() {
+  const { searchValue, setSearchValue } = React.useContext(TodoContext);
   return (
     <input
       placeholder="Ingresa una nueva tarea"

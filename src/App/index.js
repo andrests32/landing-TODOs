@@ -1,10 +1,7 @@
 import React from "react";
-import { TodoCounter } from "../TodoCounter";
-import { TodoInputSerch } from "../TodoInputSerch";
-import { TodoList } from "../TodoList";
-import { TodoItem } from "../TodoItems";
-import { TodoAddTodos } from "../TodoAddButton";
-import { useLocalStorage } from "./useLocalStorage";
+import { AppUi } from "./AppUi";
+import { TodoProvider } from "../TodoContext";
+// import { useLocalStorage } from "./useLocalStorage";
 
 // const defaultTodos = [
 //   { text: "Ver Peliculas", complete: false },
@@ -15,56 +12,53 @@ import { useLocalStorage } from "./useLocalStorage";
 // ];
 // localStorage.setItem("TODOS_V1", JSON.stringify(defaultTodos));
 
-
-
 function App() {
-  const [todos, saveTodos] = useLocalStorage("TODOS_V1", []);
-  const [searchValue, setSearchValue] = React.useState("");
-  // console.log("Busqueda de datos del search" + searchValue);
+  // Cuando hacemos el importe de nuestras props como objeto debemos tomar muy encuenta que los nombres que colocamos dentro de nuestro custom hooks sera iguales,
+  // const {todos, saveTodos} = useLocalStorage("TODOS_V1", []);
+  // Ahora si deseamos ocupar el mismo nombre de nuestros parametros anteriores usaremos los props nombrados es decir los colocaremos con los puntos indicando que peternecen asi al objeto que llamamos del custome hooks.
+  // const {item: todos, saveItem: saveTodos, loading, error} = useLocalStorage("TODOS_V1", []);
 
-  const completTodos = todos.filter((todo) => !!todo.complete).length;
-  const totalTodos = todos.length;
+  // const {item: todos, saveItem: saveTodos, loading, error} = useLocalStorage("TODOS_V1", []);
+  // const [searchValue, setSearchValue] = React.useState("");
+  // // console.log("Busqueda de datos del search" + searchValue);
 
-  const serchedTodos = todos.filter((todo) => {
-    const todoTex = todo.text.toLowerCase();
-    const serchText = searchValue.toLowerCase();
-    return todoTex.includes(serchText);
-  });
+  // const completTodos = todos.filter((todo) => !!todo.complete).length;
+  // const totalTodos = todos.length;
 
-  const checkTodo = (text) => {
-    const newTodos = [...todos];
-    const indexTodos = newTodos.findIndex((todos) => todos.text === text);
-    newTodos[indexTodos].complete = true;
-    saveTodos(newTodos);
-  };
+  // const serchedTodos = todos.filter((todo) => {
+  //   const todoTex = todo.text.toLowerCase();
+  //   const serchText = searchValue.toLowerCase();
+  //   return todoTex.includes(serchText);
+  // });
 
-  const deleteTodo = (text) => {
-    const newTodos = [...todos];
-    const indexTodos = newTodos.findIndex((todos) => todos.text === text);
-    newTodos.splice(indexTodos, 1);
-    saveTodos(newTodos);
-  };
+  // const checkTodo = (text) => {
+  //   const newTodos = [...todos];
+  //   const indexTodos = newTodos.findIndex((todos) => todos.text === text);
+  //   newTodos[indexTodos].complete = true;
+  //   saveTodos(newTodos);
+  // };
+
+  // const deleteTodo = (text) => {
+  //   const newTodos = [...todos];
+  //   const indexTodos = newTodos.findIndex((todos) => todos.text === text);
+  //   newTodos.splice(indexTodos, 1);
+  //   saveTodos(newTodos);
+  // };
 
   return (
-    <>
-      <TodoCounter complet={completTodos} total={totalTodos} />
-      <TodoInputSerch
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
+    <TodoProvider>
+      <AppUi
+      // loading={loading}
+      // error={error}
+      // completTodos={completTodos}
+      // totalTodos={totalTodos}
+      // searchValue={searchValue}
+      // setSearchValue={setSearchValue}
+      // serchedTodos={serchedTodos}
+      // checkTodo={checkTodo}
+      // deleteTodo={deleteTodo}
       />
-      <TodoAddTodos />
-      <TodoList>
-        {serchedTodos.map((todo) => (
-          <TodoItem
-            key={todo.text}
-            text={todo.text}
-            complete={todo.complete}
-            onComplete={() => checkTodo(todo.text)}
-            onDelete={() => deleteTodo(todo.text)}
-          />
-        ))}
-      </TodoList>
-    </>
+    </TodoProvider>
   );
 }
 
