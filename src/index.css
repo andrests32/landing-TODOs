@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(2px);
-
+  /* position: relative; */
 }
 
 /* code {
@@ -20,7 +20,7 @@ body {
 
 #root {
   display: flex;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   align-items: center;
   flex-direction: column;
   border-radius: 40px;
@@ -29,4 +29,18 @@ body {
   position: relative;
   min-height: 100vh;
   background-color: #44749d;
+}
+
+#modal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  /* width: 650px; */
+  /* height: 700px; */
+  /* border-radius: 20px; */
+  /* background-color: rgba(32, 35, 41,.8); */
+  z-index: 1;
 }

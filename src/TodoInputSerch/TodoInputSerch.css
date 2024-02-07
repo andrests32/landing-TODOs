@@ -1,29 +1,50 @@
+#container-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0; */
+    margin-top: 60px;
+    /* width: 500px; */
+}
+
+#container-input:hover #lupa-input {
+    color: transparent;
+}
+
 .TodoInput {
     background: white;
     color: #44749d;
     border-radius: 12px;
     height: 80px;
-    width: calc(100% - 200px);
+    width: calc(100% - 100px);
     font-size: 35px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    /* box-shadow: 0 1px 15px #333; */
+    box-shadow: 0 1px 10px #333;
     border: none;
-    margin-bottom: 40px;
-    margin-top: 60px;
     font-family: 'Montserrat Alternates', sans-serif;
     outline: none;
     border: 1px solid #333;
-    /* text-shadow: 1px 0px 1px #333; */
-
+    /* box-sizing: border-box; */
+   
 }
 
 .TodoInput::placeholder {
     color: #baafc4;
     font-size: xx-large;
     margin-top: 300px;
+    /* left: 20px; */
 }
 
-.TodoInput:hover::placeholder {
+.TodoInput:hover::placeholder{
     color: white;
 }
+
+#lupa-input {
+    right: 270px;
+    position: fixed;
+    font-size: 50px;
+    color: #baafc4;
+}
+
