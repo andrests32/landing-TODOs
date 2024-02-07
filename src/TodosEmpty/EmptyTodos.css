@@ -1,0 +1,58 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes moviendrew {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+.flecha {
+  animation-name: moviendrew;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;	
+  font-size: 100px;
+  color: rgba(255, 255, 255, 0.36);
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.container-Span {
+  padding-left: 10px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 22px;
+  color: white;
+  text-shadow: 1px 2px 1px black;
+}
+
+#alerta {
+  font-size: 50px;
+  color: #3df17b; 
+  filter: drop-shadow(0 0 1px black);
+}

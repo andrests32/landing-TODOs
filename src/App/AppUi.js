@@ -7,11 +7,14 @@ import { TodosLoading } from "../TodosLoading";
 import { TodosError } from "../TodosError";
 import { TodosEmpty } from "../TodosEmpty";
 import { TodoContext } from "../TodoContext";
+import { Modal } from "../Modal";
+import { TodoForm } from "../TodoForm"
 import React from "react";
+
 
 function AppUi() {
   // Con esta sintaxis lo que hacemos es sintetizar el (Consumer evitando las funciones en la cual tendremos que agregar las props de nuestro provider )
-  const { loading, error, serchedTodos, checkTodo, deleteTodo } =
+  const { loading, error, serchedTodos, checkTodo, deleteTodo, openModal} =
     React.useContext(TodoContext);
 
   return (
@@ -24,6 +27,12 @@ function AppUi() {
       // setSearchValue={setSearchValue}
       />
       <TodoAddTodos />
+
+      {openModal && (
+        <Modal>
+          <TodoForm/>
+        </Modal>
+      )}
 
       {/* Podemos usar esta sintaxis para hacer un consumo de nuestro (TODOCONTEXT), haciendo uso de la siguiente sintaxis (TodoContext.Consumer) en donde encapsulamos todo el codigo dentro del mismo para poder agregar las prosp que queramos recibir de nuestro provider */}
       {/* <TodoContext.Consumer> */}
