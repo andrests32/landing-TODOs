@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/landing-TODOs/static/css/main.fa6a08a5.css",
+    "main.js": "/landing-TODOs/static/js/main.8e5c73e1.js",
+    "static/media/fndoTodo.jpg": "/landing-TODOs/static/media/fndoTodo.8f2939b9279842085fab.jpg",
+    "index.html": "/landing-TODOs/index.html",
+    "main.fa6a08a5.css.map": "/landing-TODOs/static/css/main.fa6a08a5.css.map",
+    "main.8e5c73e1.js.map": "/landing-TODOs/static/js/main.8e5c73e1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa6a08a5.css",
+    "static/js/main.8e5c73e1.js"
+  ]
+}
